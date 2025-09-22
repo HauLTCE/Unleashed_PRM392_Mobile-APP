@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YourAccountActivityOrFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="?attr/actionBarTheme">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="My Account" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="scrollable" />
+        <!-- For fixed number of tabs that fit, app:tabMode="fixed" can be used -->
+        <!-- Your CSS has 5 tabs, scrollable might be better if text is long or for smaller screens -->
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- This ViewPager2 will host the content for each tab -->
+    <!-- Each tab's content would typically be a separate Fragment -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <!--
+    Alternatively, if not using ViewPager2 and managing content manually or with simple views:
+    <FrameLayout
+        android:id="@+id/tabContentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="16dp">
+        
+        This FrameLayout would be populated by your Activity/Fragment
+        based on the selected tab. Below are examples of how each tab's
+        content could be structured if inflated directly, though using
+        Fragments with ViewPager2 is generally recommended for complexity like this.
+        
+    </FrameLayout>
+    -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

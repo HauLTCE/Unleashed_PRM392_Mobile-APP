@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".NotFoundActivityOrFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Main Error Message Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/textViewErrorCode404"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="404"
+                android:textSize="120sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="0dp"/>
+
+            <TextView
+                android:id="@+id/textViewNotFoundTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Page Not Found"
+                android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/><TextView
+            android:id="@+id/textViewNotFoundMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sorry, we couldn't find the page you're looking for. The page might have been moved, deleted, or you entered the wrong URL."
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?android:attr/textColorSecondary"
+            android:gravity="center_horizontal"
+            android:maxWidth="480dp"/>
+        </LinearLayout>
+
+        <!-- Search Bar Section -->
+        <LinearLayout
+            android:id="@+id/layoutSearchNotFound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp"
+            android:maxWidth="480dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldSearchNotFound"
+                style="?attr/textInputFilledStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:startIconDrawable="@drawable/ic_launcher_foreground"
+                android:hint="Search for products..."
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextSearchQueryNotFound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonSearchNotFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Search"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <!-- Action Buttons Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            android:maxWidth="360dp">
+
+            <Button
+                android:id="@+id/buttonGoHomeNotFound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Go Home"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <!-- On larger screens (e.g. sw360dp+), this could be horizontal -->
+
+                <Button
+                    android:id="@+id/buttonBrowseProductsNotFound"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Browse Products"
+                    android:layout_marginBottom="8dp"/>
+                <!-- Or layout_weight="1" and marginEnd in horizontal -->
+
+                <Button
+                    android:id="@+id/buttonContactSupportNotFound"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Support"/>
+                <!-- Or layout_weight="1" and marginStart in horizontal -->
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Popular Pages Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="?attr/colorSurfaceVariant"
+            app:cardCornerRadius="@dimen/corner_radius_md"
+            android:layout_marginTop="16dp"
+            android:maxWidth="480dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popular Pages"
+                    android:textAppearance="?attr/textAppearanceTitleSmall"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Using Flow layout for links to wrap nicely -->
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupPopularPages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="4dp">
+
+                    <!-- Chips will be added programmatically, or you can define them here -->
+                    <!-- Example of how they might look if defined statically (though dynamic is better) -->
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipHome"
+                        style="@style/Widget.Material3.Chip.Suggestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Home"
+                        app:chipBackgroundColor="?attr/colorSurface"
+                        android:textColor="?attr/colorPrimary"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipShop"
+                        style="@style/Widget.Material3.Chip.Suggestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shop"
+                        app:chipBackgroundColor="?attr/colorSurface"
+                        android:textColor="?attr/colorPrimary"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAbout"
+                        style="@style/Widget.Material3.Chip.Suggestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About"
+                        app:chipBackgroundColor="?attr/colorSurface"
+                        android:textColor="?attr/colorPrimary"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipContact"
+                        style="@style/Widget.Material3.Chip.Suggestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact"
+                        app:chipBackgroundColor="?attr/colorSurface"
+                        android:textColor="?attr/colorPrimary"/>
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
+
+
+
