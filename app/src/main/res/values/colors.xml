@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- res/values/colors.xml -->
+<?xml version="1.0" encoding="utf-8"?><!-- res/values/colors.xml -->
 <resources>
     <!-- Light Theme Colors -->
     <color name="background_light">#FFFFFF</color>
@@ -12,7 +11,8 @@
     <color name="primary_light">#576D64</color>
     <color name="primary_foreground_light">#FFFFFF</color>
     <color name="secondary_light">#AAC0B5</color>
-    <color name="secondary_foreground_light">#000000</color><color name="muted_light">#F8F5EE</color>
+    <color name="secondary_foreground_light">#000000</color>
+    <color name="muted_light">#F8F5EE</color>
     <color name="muted_foreground_light">#576D64</color>
     <color name="accent_light">#576D64</color> <!-- Same as primary -->
     <color name="accent_foreground_light">#FFFFFF</color>
@@ -43,22 +43,28 @@
     <color name="primary_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
     <color name="primary_foreground_dark">#343434</color> <!-- Placeholder for oklch(0.205 0 0) -->
     <color name="secondary_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
-    <color name="secondary_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="secondary_foreground_dark">#FCFCFC
+    </color> <!-- Placeholder for oklch(0.985 0 0) -->
     <color name="muted_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
     <color name="muted_foreground_dark">#B5B5B5</color> <!-- Placeholder for oklch(0.708 0 0) -->
     <color name="accent_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
     <color name="accent_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
-    <color name="destructive_dark">#8C2B3F</color> <!-- Placeholder for oklch(0.396 0.141 25.723) -->
-    <color name="destructive_foreground_dark">#D47A8B</color> <!-- Placeholder for oklch(0.637 0.237 25.331) -->
+    <color name="destructive_dark">#8C2B3F
+    </color> <!-- Placeholder for oklch(0.396 0.141 25.723) -->
+    <color name="destructive_foreground_dark">#D47A8B
+    </color> <!-- Placeholder for oklch(0.637 0.237 25.331) -->
     <color name="border_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
     <color name="input_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
     <color name="ring_dark">#707070</color> <!-- Placeholder for oklch(0.439 0 0) -->
     <color name="sidebar_dark">#343434</color> <!-- Placeholder for oklch(0.205 0 0) -->
     <color name="sidebar_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
-    <color name="sidebar_primary_dark">#9C6ADE</color> <!-- Placeholder for oklch(0.488 0.243 264.376) -->
-    <color name="sidebar_primary_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="sidebar_primary_dark">#9C6ADE
+    </color> <!-- Placeholder for oklch(0.488 0.243 264.376) -->
+    <color name="sidebar_primary_foreground_dark">#FCFCFC
+    </color> <!-- Placeholder for oklch(0.985 0 0) -->
     <color name="sidebar_accent_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
-    <color name="sidebar_accent_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="sidebar_accent_foreground_dark">#FCFCFC
+    </color> <!-- Placeholder for oklch(0.985 0 0) -->
     <color name="sidebar_border_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
     <color name="sidebar_ring_dark">#707070</color> <!-- Placeholder for oklch(0.439 0 0) -->
 
@@ -66,5 +72,9 @@
     <color name="chart_1_light">#FF0000</color> <!-- Placeholder for oklch(0.646 0.222 41.116) -->
     <color name="chart_1_dark">#FF0000</color> <!-- Placeholder for oklch(0.488 0.243 264.376) -->
     <!-- ... Add other chart colors similarly -->
+    <!-- res/values/colors.xml -->
+    <color name="checkout_success">#22C55E</color> <!-- Example for Tailwind's green-500 -->
+    <color name="checkout_pending">#FFEB3B</color>
+    <color name="checkout_failure">#EF4444</color> <!-- Example for Tailwind's red-500 -->
 
 </resources>

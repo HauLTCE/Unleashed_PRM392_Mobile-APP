@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="?attr/materialCardViewElevatedStyle"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewTeamMember"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            tools:src="@tools:sample/avatars"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/colorSurfaceVariant" />
+
+        <TextView
+            android:id="@+id/textViewTeamMemberName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Sarah Johnson"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/textViewTeamMemberRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Founder &amp; CEO"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?attr/colorPrimary"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textViewTeamMemberBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Fashion industry veteran with 15+ years of experience."
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?android:attr/textColorSecondary"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+

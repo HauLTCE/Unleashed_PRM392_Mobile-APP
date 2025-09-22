@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".CheckoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewCheckoutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Checkout"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall"
+            android:textStyle="bold" />
+
+        <!-- Main content grid (simulated with LinearLayout for simplicity) -->
+        <!-- On larger screens (tablets), you might use ConstraintLayout with guidelines -->
+        <!-- or a GridLayout. For phones, this often becomes a single column scroll. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- On large screens, you might change this to horizontal -->
+
+            <!-- Checkout Form Section (Left Column) -->
+            <LinearLayout
+                android:id="@+id/layoutCheckoutForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+                <!-- This would be a LinearLayout with layout_weight="1" in a horizontal parent on large screens -->
+
+                <!-- Contact Information Card -->
+                <include layout="@layout/checkout_user_information" />
+
+                <!-- Shipping Address Card -->
+                <include layout="@layout/checkout_shipping_address" />
+
+                <!-- Delivery Method Card -->
+                <include layout="@layout/checkout_delivery_method" />
+
+                <!-- Payment Method Card -->
+                <include layout="@layout/checkout_payment_method" />
+
+                <!-- Special Instructions Card -->
+                <include layout="@layout/checkout_special_instructions" />
+
+            </LinearLayout>
+
+            <!-- Order Summary Section (Right Column) -->
+            <LinearLayout
+                android:id="@+id/layoutOrderSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- This would be a LinearLayout with layout_weight="1" in a horizontal parent on large screens -->
+                <!-- The "sticky top-8" behavior requires custom handling or CoordinatorLayout -->
+                <include layout="@layout/check_out_order_summary" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+

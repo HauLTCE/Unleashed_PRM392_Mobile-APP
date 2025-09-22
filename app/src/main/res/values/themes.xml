@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.Unleashed_PRM392_MobileAPP" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -60,40 +60,42 @@
     <style name="Theme.Unleashed_PRM392_MobileAPP" parent="Base.Theme.Unleashed_PRM392_MobileAPP" />
 
     <!-- Shape Appearances (for corner radius) -->
-    <style name="ShapeAppearance.Unleashed_PRM392_MobileAPP.SmallComponent"
-        parent="ShapeAppearance.Material3.SmallComponent">
+    <style name="ShapeAppearance.Unleashed_PRM392_MobileAPP.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
         <item name="cornerSize">@dimen/corner_radius_sm</item>
     </style>
-    <style name="ShapeAppearance.Unleashed_PRM392_MobileAPP.MediumComponent"
-        parent="ShapeAppearance.Material3.MediumComponent">
+
+    <style name="ShapeAppearance.Unleashed_PRM392_MobileAPP.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
         <item name="cornerSize">@dimen/corner_radius_md</item>
     </style>
-    <style name="ShapeAppearance.Unleashed_PRM392_MobileAPP.LargeComponent"
-        parent="ShapeAppearance.Material3.LargeComponent">
+
+    <style name="ShapeAppearance.Unleashed_PRM392_MobileAPP.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
         <item name="cornerSize">@dimen/corner_radius_lg</item>
     </style>
 
     <!-- Specific Widget Styles -->
-    <style name="Widget.Unleashed_PRM392_MobileAPP.TextInputLayout"
-        parent="Widget.Material3.TextInputLayout.FilledBox">
+    <style name="Widget.Unleashed_PRM392_MobileAPP.TextInputLayout" parent="Widget.Material3.TextInputLayout.FilledBox">
         <!-- <item name="android:background">@color/input_background_light</item> --> <!-- FilledBox already has a background -->
         <item name="boxBackgroundColor">@color/input_background_light</item>
         <item name="hintTextColor">?attr/appMutedForeground</item>
         <item name="android:textColorHint">?attr/appMutedForeground</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.Unleashed_PRM392_MobileAPP.MediumComponent</item>
+        <item name="shapeAppearance">
+            @style/ShapeAppearance.Unleashed_PRM392_MobileAPP.MediumComponent
+        </item>
         <item name="boxStrokeWidth">0dp
         </item> <!-- No border around the box itself if input is transparent -->
     </style>
 
     <!-- You might need to override specific widget styles for dark theme if colors differ significantly -->
-    <style name="Widget.Unleashed_PRM392_MobileAPP.TextInputLayout.Dark"
-        parent="Widget.Material3.TextInputLayout.FilledBox">
+    <style name="Widget.Unleashed_PRM392_MobileAPP.TextInputLayout.Dark" parent="Widget.Material3.TextInputLayout.FilledBox">
         <item name="boxBackgroundColor">@color/input_dark</item> <!-- CSS var -->
         <item name="hintTextColor">?attr/appMutedForeground</item>
         <item name="android:textColorHint">?attr/appMutedForeground</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.Unleashed_PRM392_MobileAPP.MediumComponent</item>
+        <item name="shapeAppearance">
+            @style/ShapeAppearance.Unleashed_PRM392_MobileAPP.MediumComponent
+        </item>
         <item name="boxStrokeWidth">0dp</item>
     </style>
+
     <attr name="appBackgroundAlt" format="color" />
     <attr name="appPopover" format="color" />
     <attr name="appPopoverForeground" format="color" />

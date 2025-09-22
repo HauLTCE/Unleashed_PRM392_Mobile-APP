@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="?attr/materialCardViewElevatedStyle"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <FrameLayout
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/circular_background_primary"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textViewValueIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="🌱"
+                android:textSize="28sp"
+                android:textColor="?attr/colorOnPrimary"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textViewValueTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Sustainability"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textViewValueDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="We're committed to reducing our environmental impact through sustainable materials and ethical manufacturing practices."
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="?android:attr/textColorSecondary"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+

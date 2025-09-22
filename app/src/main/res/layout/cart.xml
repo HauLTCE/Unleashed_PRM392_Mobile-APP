@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivityOrFragment">
+
+    <!-- Empty Cart View (Initially Gone) -->
+    <include
+        android:id="@+id/layoutEmptyCart"
+        layout="@layout/cart_empty_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!-- Main Cart Content -->
+    <LinearLayout
+        android:id="@+id/layoutCartContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:visibility="gone">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbarCart"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Shopping Cart">
+
+                <Button
+                    android:id="@+id/buttonClearCart"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:text="Clear Cart"
+                    app:icon="@drawable/ic_launcher_foreground" />
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- For larger screens (e.g., sw600dp), you might use a horizontal LinearLayout with weights, -->
+        <!-- or a ConstraintLayout. For phones, this often becomes a single column scroll. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <!-- On large screens, change to horizontal -->
+
+            <!-- Cart Items (Left Column / Top on Mobile) -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCartItems"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/cart_list_item"
+            tools:itemCount="2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginBottom="16dp"/>
+            <!-- On large screens, this would have a layout_marginEnd if horizontal -->
+
+
+            <!-- Order Summary (Right Column / Bottom on Mobile) -->
+            <!-- The "sticky top-8" behavior in React is complex in Android. -->
+            <!-- For simplicity, it will scroll with content. For true sticky, -->
+            <!-- you'd use CoordinatorLayout with custom Behaviors or NestedScrollView tricks. -->
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+            android:fillViewport="true">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardOrderSummary"
+                style="?attr/materialCardViewElevatedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- On large screens, this would have a layout_marginStart if horizontal -->
+                <include layout="@layout/cart_order_summary" />
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout></androidx.coordinatorlayout.widget.CoordinatorLayout>
