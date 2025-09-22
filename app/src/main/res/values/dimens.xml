@@ -1,0 +1,18 @@
+<!-- res/values/dimens.xml -->
+<resources>
+    <dimen name="corner_radius_default">10dp</dimen> <!-- 10dp if base font is 16sp -->
+    <!-- You can calculate other radii based on this if needed in dp -->
+    <dimen name="corner_radius_lg">10dp</dimen> <!-- Assuming 0.625rem = 10dp -->
+    <dimen name="corner_radius_md">8dp</dimen>  <!-- (radius - 2px) -->
+    <dimen name="corner_radius_sm">6dp</dimen>  <!-- (radius - 4px) -->
+    <dimen name="corner_radius_xl">14dp</dimen> <!-- (radius + 4px) -->
+
+    <!-- Approximate Font Sizes (Android uses sp for text size) -->
+    <!-- Base font size from CSS: 16px. Assuming 1px = 1sp for simplicity here -->
+    <dimen name="text_size_base">16sp</dimen>
+    <dimen name="text_size_lg">18sp</dimen> <!-- text-lg in Tailwind is often 1.125rem -->
+    <dimen name="text_size_xl">20sp</dimen> <!-- text-xl in Tailwind is often 1.25rem -->
+    <dimen name="text_size_2xl">24sp</dimen><!-- text-2xl in Tailwind is often 1.5rem -->
+
+
+</resources>

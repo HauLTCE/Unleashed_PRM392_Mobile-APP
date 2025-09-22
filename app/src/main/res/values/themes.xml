@@ -1,9 +1,116 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Unleashed_PRM392_MobileAPP" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_light</item>
+        <item name="colorOnPrimary">@color/primary_foreground_light</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary_light</item>
+        <item name="colorOnSecondary">@color/secondary_foreground_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant
+        </item> <!-- Or a specific color -->
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="colorSurface">@color/card_light
+        </item> <!-- Used by CardView, BottomSheet etc. -->
+        <item name="colorOnBackground">@color/foreground_light</item>
+        <item name="colorOnSurface">@color/card_foreground_light</item>
+        <!-- Error colors -->
+        <item name="colorError">@color/destructive_light</item>
+        <item name="colorOnError">@color/destructive_foreground_light</item>
+
+        <!-- Custom App Attributes (mimicking CSS vars) -->
+        <item name="appBackgroundAlt">@color/background_alt_light</item>
+        <item name="appPopover">@color/popover_light</item>
+        <item name="appPopoverForeground">@color/popover_foreground_light</item>
+        <item name="appMuted">@color/muted_light</item>
+        <item name="appMutedForeground">@color/muted_foreground_light</item>
+        <item name="appAccent">@color/accent_light</item>
+        <item name="appAccentForeground">@color/accent_foreground_light</item>
+        <item name="appBorder">@color/border_light</item>
+        <item name="appInputBackground">@color/input_background_light</item>
+        <item name="appSwitchBackground">@color/switch_background_light</item>
+        <item name="appRing">@color/ring_light</item>
+        <item name="appSidebar">@color/sidebar_light</item>
+        <item name="appSidebarForeground">@color/sidebar_foreground_light</item>
+        <item name="appSidebarPrimary">@color/sidebar_primary_light</item>
+        <item name="appSidebarPrimaryForeground">@color/sidebar_primary_foreground_light</item>
+        <item name="appSidebarAccent">@color/sidebar_accent_light</item>
+        <item name="appSidebarAccentForeground">@color/sidebar_accent_foreground_light</item>
+        <item name="appSidebarBorder">@color/sidebar_border_light</item>
+        <item name="appSidebarRing">@color/sidebar_ring_light</item>
+
+        <!-- Default shape appearances for Material Components -->
+        <item name="shapeAppearanceSmallComponent">
+            @style/ShapeAppearance.Unleashed_PRM392_MobileAPP.SmallComponent
+        </item>
+        <item name="shapeAppearanceMediumComponent">
+            @style/ShapeAppearance.Unleashed_PRM392_MobileAPP.MediumComponent
+        </item>
+        <item name="shapeAppearanceLargeComponent">
+            @style/ShapeAppearance.Unleashed_PRM392_MobileAPP.LargeComponent
+        </item>
+
+        <!-- Input field style -->
+        <item name="textInputStyle">@style/Widget.Unleashed_PRM392_MobileAPP.TextInputLayout</item>
+
     </style>
 
     <style name="Theme.Unleashed_PRM392_MobileAPP" parent="Base.Theme.Unleashed_PRM392_MobileAPP" />
+
+    <!-- Shape Appearances (for corner radius) -->
+    <style name="ShapeAppearance.Unleashed_PRM392_MobileAPP.SmallComponent"
+        parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">@dimen/corner_radius_sm</item>
+    </style>
+    <style name="ShapeAppearance.Unleashed_PRM392_MobileAPP.MediumComponent"
+        parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">@dimen/corner_radius_md</item>
+    </style>
+    <style name="ShapeAppearance.Unleashed_PRM392_MobileAPP.LargeComponent"
+        parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSize">@dimen/corner_radius_lg</item>
+    </style>
+
+    <!-- Specific Widget Styles -->
+    <style name="Widget.Unleashed_PRM392_MobileAPP.TextInputLayout"
+        parent="Widget.Material3.TextInputLayout.FilledBox">
+        <!-- <item name="android:background">@color/input_background_light</item> --> <!-- FilledBox already has a background -->
+        <item name="boxBackgroundColor">@color/input_background_light</item>
+        <item name="hintTextColor">?attr/appMutedForeground</item>
+        <item name="android:textColorHint">?attr/appMutedForeground</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Unleashed_PRM392_MobileAPP.MediumComponent</item>
+        <item name="boxStrokeWidth">0dp
+        </item> <!-- No border around the box itself if input is transparent -->
+    </style>
+
+    <!-- You might need to override specific widget styles for dark theme if colors differ significantly -->
+    <style name="Widget.Unleashed_PRM392_MobileAPP.TextInputLayout.Dark"
+        parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/input_dark</item> <!-- CSS var -->
+        <item name="hintTextColor">?attr/appMutedForeground</item>
+        <item name="android:textColorHint">?attr/appMutedForeground</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Unleashed_PRM392_MobileAPP.MediumComponent</item>
+        <item name="boxStrokeWidth">0dp</item>
+    </style>
+    <attr name="appBackgroundAlt" format="color" />
+    <attr name="appPopover" format="color" />
+    <attr name="appPopoverForeground" format="color" />
+    <attr name="appMuted" format="color" />
+    <attr name="appMutedForeground" format="color" />
+    <attr name="appAccent" format="color" />
+    <attr name="appAccentForeground" format="color" />
+    <attr name="appBorder" format="color" />
+    <attr name="appInputBackground" format="color" />
+    <attr name="appSwitchBackground" format="color" />
+    <attr name="appRing" format="color" />
+    <attr name="appSidebar" format="color" />
+    <attr name="appSidebarForeground" format="color" />
+    <attr name="appSidebarPrimary" format="color" />
+    <attr name="appSidebarPrimaryForeground" format="color" />
+    <attr name="appSidebarAccent" format="color" />
+    <attr name="appSidebarAccentForeground" format="color" />
+    <attr name="appSidebarBorder" format="color" />
+    <attr name="appSidebarRing" format="color" />
 </resources>

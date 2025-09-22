@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/colors.xml -->
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Light Theme Colors -->
+    <color name="background_light">#FFFFFF</color>
+    <color name="background_alt_light">#F8F5EE</color>
+    <color name="foreground_light">#000000</color>
+    <color name="card_light">#FFFFFF</color>
+    <color name="card_foreground_light">#000000</color>
+    <color name="popover_light">#FFFFFF</color>
+    <color name="popover_foreground_light">#000000</color>
+    <color name="primary_light">#576D64</color>
+    <color name="primary_foreground_light">#FFFFFF</color>
+    <color name="secondary_light">#AAC0B5</color>
+    <color name="secondary_foreground_light">#000000</color><color name="muted_light">#F8F5EE</color>
+    <color name="muted_foreground_light">#576D64</color>
+    <color name="accent_light">#576D64</color> <!-- Same as primary -->
+    <color name="accent_foreground_light">#FFFFFF</color>
+    <color name="destructive_light">#d4183d</color>
+    <color name="destructive_foreground_light">#ffffff</color>
+    <color name="border_light">#1A000000</color> <!-- rgba(0, 0, 0, 0.1) -->
+    <color name="input_background_light">#f3f3f5</color>
+    <color name="switch_background_light">#cbced4</color>
+    <color name="ring_light">#AAC0B5</color>
+    <color name="sidebar_light">#FFFFFF</color>
+    <color name="sidebar_foreground_light">#000000</color>
+    <color name="sidebar_primary_light">#576D64</color>
+    <color name="sidebar_primary_foreground_light">#FFFFFF</color>
+    <color name="sidebar_accent_light">#F8F5EE</color>
+    <color name="sidebar_accent_foreground_light">#000000</color>
+    <color name="sidebar_border_light">#1A000000</color> <!-- rgba(0, 0, 0, 0.1) -->
+    <color name="sidebar_ring_light">#AAC0B5</color>
+
+    <!-- Dark Theme Colors (Convert oklch to hex) -->
+    <!-- You'll need to manually convert these oklch values to hex -->
+    <!-- For example, oklch(0.145 0 0) is roughly a very dark gray, close to #252525 -->
+    <color name="background_dark">#252525</color> <!-- Placeholder for oklch(0.145 0 0) -->
+    <color name="foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="card_dark">#252525</color> <!-- Placeholder for oklch(0.145 0 0) -->
+    <color name="card_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="popover_dark">#252525</color> <!-- Placeholder for oklch(0.145 0 0) -->
+    <color name="popover_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="primary_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="primary_foreground_dark">#343434</color> <!-- Placeholder for oklch(0.205 0 0) -->
+    <color name="secondary_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
+    <color name="secondary_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="muted_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
+    <color name="muted_foreground_dark">#B5B5B5</color> <!-- Placeholder for oklch(0.708 0 0) -->
+    <color name="accent_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
+    <color name="accent_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="destructive_dark">#8C2B3F</color> <!-- Placeholder for oklch(0.396 0.141 25.723) -->
+    <color name="destructive_foreground_dark">#D47A8B</color> <!-- Placeholder for oklch(0.637 0.237 25.331) -->
+    <color name="border_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
+    <color name="input_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
+    <color name="ring_dark">#707070</color> <!-- Placeholder for oklch(0.439 0 0) -->
+    <color name="sidebar_dark">#343434</color> <!-- Placeholder for oklch(0.205 0 0) -->
+    <color name="sidebar_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="sidebar_primary_dark">#9C6ADE</color> <!-- Placeholder for oklch(0.488 0.243 264.376) -->
+    <color name="sidebar_primary_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="sidebar_accent_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
+    <color name="sidebar_accent_foreground_dark">#FCFCFC</color> <!-- Placeholder for oklch(0.985 0 0) -->
+    <color name="sidebar_border_dark">#454545</color> <!-- Placeholder for oklch(0.269 0 0) -->
+    <color name="sidebar_ring_dark">#707070</color> <!-- Placeholder for oklch(0.439 0 0) -->
+
+    <!-- Chart Colors (placeholders, convert oklch to hex) -->
+    <color name="chart_1_light">#FF0000</color> <!-- Placeholder for oklch(0.646 0.222 41.116) -->
+    <color name="chart_1_dark">#FF0000</color> <!-- Placeholder for oklch(0.488 0.243 264.376) -->
+    <!-- ... Add other chart colors similarly -->
+
 </resources>
